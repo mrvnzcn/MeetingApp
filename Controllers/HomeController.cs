@@ -1,3 +1,4 @@
+using MeetingApp.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MeetingApp.Controllers
@@ -10,13 +11,19 @@ namespace MeetingApp.Controllers
         public IActionResult Index()
         {
             int saat = DateTime.Now.Hour;
-            // ViewBag.Selamlama = saat > 12 ? "İyi günler":"Günaydın";
-            // ViewBag.UserName = "Mervan";
-
+            
             ViewData["Selamlama"] = saat > 12 ? "İyi günler":"Günaydın";
             ViewData["UserName"] = "Mervan";
+
+            var meetingInfo = new MeetingInfo()
+            {
+                Id = 1,
+                Location = "İstanbul, ABC Kongre Merkezi",
+                Date = new DateTime(2024, 02, 10, 10, 0, 0),
+                NumberOfPeople = 100
+            };
             
-            return View();
+            return View(meetingInfo);
         }
     }
 }
