@@ -3,7 +3,8 @@
     ViewBag.Title = "Başvuru Formu";
 }
 <h1 class="h4 text-center" >Toplantı Katılım Formu</h1>
-<form method="post" action="/meeting/apply">
+<form method="post" action="/meeting/apply" novalidate>
+    <div asp-validation-summary="All" class="danger"></div>
     <div class="mb-3">
         <label asp-for="Name" class="form-label">Ad Soyad</label>
         <input asp-for="Name" class="form-control">
