@@ -13,7 +13,7 @@ namespace MeetingApp.Controllers
             int saat = DateTime.Now.Hour;
             
             ViewData["Selamlama"] = saat > 12 ? "İyi günler":"Günaydın";
-            ViewData["UserName"] = "Mervan";
+            // ViewData["UserName"] = "Mervan";
 
             var meetingInfo = new MeetingInfo()
             {
