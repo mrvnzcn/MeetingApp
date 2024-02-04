@@ -12,11 +12,11 @@ namespace MeetingApp.Controllers
         {
             int saat = DateTime.Now.Hour;
             
-            ViewData["Selamlama"] = saat > 12 ? "İyi günler":"Günaydın";
+            ViewData["Selamlama"] = saat > 12 ? "İyi günler":"Günaydın"; //günaydın, iyi günler, iyi akşamlar 
             int UserCount = Repository.Users.Where(info=> info.WillAttend == true).Count();
             // ViewData["UserName"] = "Mervan";
 
-            var meetingInfo = new MeetingInfo()
+            var meetingInfo = new MeetingInfo() // 1'den fazla kongre - kongre listeleme - kongre yaratma
             {
                 Id = 1,
                 Location = "İstanbul, ABC Kongre Merkezi",

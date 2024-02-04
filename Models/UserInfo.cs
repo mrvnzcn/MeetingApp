@@ -9,7 +9,7 @@ namespace MeetingApp.Models
         [Required(ErrorMessage = "Ad Soyad alanı zorunludur.")]
         public string? Name { get; set; }
         [Required(ErrorMessage = "Telefon alanı zorunludur.")]
-        public string? Phone { get; set; }
+        public string? Phone { get; set; } // phone için validation
         [Required(ErrorMessage = "Email alanı zorunludur.")]
         [EmailAddress(ErrorMessage = "Hatalı email girdiniz.")]
         public string? Email { get; set; }
